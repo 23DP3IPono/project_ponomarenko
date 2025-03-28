@@ -47,12 +47,12 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation{" +
-                "guestName='" + guestName + '\'' +
-                ", roomNumber=" + roomNumber +
-                ", checkInDate=" + checkInDate +
-                ", checkOutDate=" + checkOutDate +
-                '}';
+        return "Reservation: " +
+                "Viesa vārds='" + guestName + '\'' +
+                ", Numura numurs=" + roomNumber +
+                ", Ierašanās datums=" + checkInDate +
+                ", Izrakstīšanās datums=" + checkOutDate +
+                '.';
     }
 
     

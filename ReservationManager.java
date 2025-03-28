@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ReservationManager {
     private List<Reservation> reservations;
@@ -20,4 +21,15 @@ public class ReservationManager {
     public List<Reservation> getReservations() {
         return reservations;
     }
+
+    public List<Reservation> searchByGuestName(String name) {
+        return reservations.stream()
+                .filter(reservation -> reservation.getGuestName().equalsIgnoreCase(name))
+                .collect(Collectors.toList());
+    }
+
+    public void displayReservations() {
+        reservations.forEach(System.out::println);
+    }    
+
 }
